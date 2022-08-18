@@ -23,7 +23,27 @@
 + **git rebase имя_ветки** - переносит все изменения ветки так что все изменения выглядят последовательно выполненными  
 + **git reset HEAD~1/имя_ветки** - отмена изменений на один коммит (работает для локального репозитория, но не работает для удаленного)  
 + **git revert имя_ветки** - отменяте одно изменение и делится этим изменением с пользователями этого репозитория  
-+ **git cherry-pick <commit 1> <commit 2> <...>** - копирует несколько коммитов на то место, где сейчас находишься
++ **git cherry-pick <commit 1> <commit 2> <...>** - копирует несколько коммитов на то место, где сейчас находишься (для использования этой команды нужно точно знать хэши нужных коммитов)  
+
+## Создание удаленного репозитория на GitHub
+
+**…or create a new repository on the command line
+echo "# GIT-instruction" >> README.md**   
++ git init  
++ git add README.md  
++ git commit -m "first commit"  
++ git branch -M main  
++ git remote add origin https://github.com/Datitov1986/GIT-instruction.git  
++ git push -u origin main  
+
+**…or push an existing repository from the command line**  
++ git remote add origin https://github.com/Datitov1986/GIT-instruction.git  
++ git branch -M main  
++ git push -u origin main  
+…or import code from another repository  
+You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+
+
 ## Выделение текста  
 Чтобы выделить текст курсива необходимо текст заключить в знаки "*" *Курсив* или знак нижнего подчеркивания, например _так_ 
 Чтобы выделить текст полужирным необходимо текст заключить в двойные звездочки **Полужирный** или двойные нижние подчеркивания __вот так__  
